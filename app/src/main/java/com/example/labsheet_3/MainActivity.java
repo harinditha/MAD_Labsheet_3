@@ -2,6 +2,7 @@ package com.example.labsheet_3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -18,18 +19,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /**calls when the user send tap button*/
-
-        public void sendMessage(View view){
-
-            Intent intent = new Intent(this, DisplayMessageActivity.class);
-            EditText editText = (EditText) findViewById(R.id.editText);
-            String message = editText.getText().toString();
-            intent.putExtra(EXTRA_MESSAGE, message);
-            startActivity(intent);
+        openonclick();
 
 
+    }
 
-        }
+    /**
+     * calls when the user send tap button
+     */
+
+    public void openonclick() {
+        @SuppressLint("WrongViewCast") EditText userTextEntry = (EditText) findViewById(R.id.textView);
+
+        int number = Integer.parseInt(userTextEntry.getText().toString());
+
+
+        Intent intent = new Intent(MainActivity.this, DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, number);
+
+        startActivity(intent);
     }
 }
+

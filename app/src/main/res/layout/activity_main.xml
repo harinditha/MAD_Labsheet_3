@@ -13,7 +13,7 @@
         android:layout_height="46dp"
         android:layout_marginStart="276dp"
         android:layout_marginLeft="276dp"
-        android:text="@string/button_send"
+        android:text="Send"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -24,7 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="36dp"
-        android:text="@string/edit_message"
+        android:text="Edit message"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
